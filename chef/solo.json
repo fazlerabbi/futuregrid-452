@@ -1,0 +1,11 @@
+{
+  "run_list": [ 
+        "role[java]", "recipe[java]", "role[hadoop]", 
+        "recipe[hadoop::hadoop_hdfs_namenode]",
+        "recipe[hadoop::hadoop_yarn_nodemanager]", 
+        "recipe[hadoop::hadoop_yarn_resourcemanager]",
+        "role[mysql]", "recipe[mysql::client]", "recipe[mysql::server]",
+	"recipe[futuregrid-452]" 
+  ]
+}
+
